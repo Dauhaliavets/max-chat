@@ -1,0 +1,25 @@
+.sidebarWrapper {
+  width: 380px;
+  background-color: #17181c;
+  border-right: 1px solid #ffffff0f;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.sidebarTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chatList {
+  flex: 1;
+  overflow-y: auto;
+}

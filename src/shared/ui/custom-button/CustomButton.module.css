@@ -1,0 +1,23 @@
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #ffffff1a;
+}
+
+.primaryBtn {
+  background-color: #3f8cff;
+}
+
+.primaryBtn:hover {
+  background-color: #2b7ae0;
+}

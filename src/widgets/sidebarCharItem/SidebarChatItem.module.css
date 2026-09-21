@@ -1,0 +1,71 @@
+.chatItem {
+  display: flex;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chatItem.active {
+  background-color: #364758;
+}
+
+.chatItem:hover {
+  background-color: #202b36;
+}
+
+.avatarContainer {
+  margin-right: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatarDefault {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f8cff;
+}
+
+.chatInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.chatInfoTop,
+.chatInfoBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatNameWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chatName {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.chatInfoBottom {
+  margin-top: 4px;
+}
+
+.unreadBadge {
+  background-color: #3f8cff;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
