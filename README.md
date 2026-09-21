@@ -1,75 +1,59 @@
-# React + TypeScript + Vite
+# MAX Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для обмена текстовыми сообщениями в мессенджере MAX через GREEN-API.
 
-Currently, two official plugins are available:
+## 📋 Описание
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Проект представляет собой простой чат-интерфейс, разработанный в соответствии с техническим заданием. Пользователь вводит свои учётные данные GREEN-API (`idInstance`, `apiTokenInstance`), указывает номер телефона получателя, после чего может отправлять и получать текстовые сообщения.
 
-## React Compiler
+## ✨ Функционал
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Ввод учётных данных GREEN-API (`idInstance`, `apiTokenInstance`).
+- Создание нового чата по номеру телефона.
+- Отправка текстовых сообщений (метод `SendMessage`).
+- Получение входящих текстовых сообщений (метод `ReceiveNotification`).
+- Отображение диалога в стиле веб-версии MAX.
 
-## Expanding the ESLint configuration
+## 🛠 Технологии
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** — библиотека для построения пользовательского интерфейса.
+- **TypeScript** — статическая типизация.
+- **Vite** — сборка и dev-сервер.
+- **React Router** — маршрутизация.
+- **React Icons** — набор иконок.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Установка и запуск
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Для запуска проекта убедитесь, что у вас установлен [Node.js](https://nodejs.org/).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Установка зависимостей
+npm install
 
+# Запуск в режиме разработки
+npm run dev
+
+# Сборка для production
+npm run build
+
+# Предпросмотр собранной версии
+npm run preview
+
+# Линтинг кода
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## 📖 Использование
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Откройте приложение в браузере (по умолчанию: `http://localhost:5173`).
+2. Введите `idInstance` и `apiTokenInstance`, полученные в личном кабинете GREEN-API.
+3. Укажите номер телефона получателя в международном формате без плюса (например, `79999999999`).
+4. Нажмите кнопку **«Создать чат»**.
+5. Введите текстовое сообщение и отправьте его.
+6. Ответы получателя будут отображаться в окне чата автоматически.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🌐 Просмотр онлайн
 
-```
+Приложение развернуто и доступно для тестирования в браузере по следующей ссылке:
+
+🔗 **[MAX Chat на Vercel](https://max-chat-dauhaliavets.vercel.app/)**
